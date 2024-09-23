@@ -9,10 +9,13 @@ dotenv.config()
 import "./database/connection"
 
 import userRoute from "./routes/userRoute"
+import adminSeeder from "./adminSeeding/adminSeeding"
 
 app.use(express.json())
 
 app.use("",userRoute)
+
+adminSeeder()
 
 
 app.listen(port,()=>{

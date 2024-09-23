@@ -6,6 +6,9 @@ import jwt from "jsonwebtoken"
 
 class AuthController{
 
+
+    //Register
+
   public static async registerUser(req:Request,res:Response):Promise<void>{
      
     
@@ -31,6 +34,9 @@ class AuthController{
         })
     
     }
+
+
+    //Login
 
     public static async loginUser(req:Request,res:Response):Promise<void>{
         const {email,password} =req.body
