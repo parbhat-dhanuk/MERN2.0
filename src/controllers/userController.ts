@@ -73,7 +73,7 @@ class AuthController{
               
             // generate token
 
-           const token = jwt.sign({id:data.id},"parbhat",{
+           const token = jwt.sign({id:data.id},process.env.SECRET_KEY as string,{
                 expiresIn:"20d"
             })
             res.status(200).json({

@@ -11,9 +11,11 @@ import "./database/connection"
 import userRoute from "./routes/userRoute"
 import adminSeeder from "./adminSeeding/adminSeeding"
 
+import productRoute from "./routes/productRoutes"
 app.use(express.json())
 
 app.use("",userRoute)
+app.use("/admin/product",productRoute)
 
 adminSeeder()
 
